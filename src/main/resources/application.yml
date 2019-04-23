@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://127.0.0.1:8761/eureka/
+
+#Redirect to Eureka Server by hitting http://localhost:8081/baghant 
+zuul:
+  routes:
+    baghant:
+      url: http://localhost:8761
+
+spring:
+  application:
+    name: Baghant-Gateway
+
+
