@@ -5,13 +5,13 @@ server:
 #  client:
 #    serviceUrl:
 #      defaultZone: http://127.0.0.1:8761/eureka/
-
+#http://localhost:8081/SPRING-CLOUD-EUREKA-CLIENT/
 #Redirect to Eureka Server by hitting http://localhost:8081/baghant 
 zuul:
   routes:
     baghant:
       url: http://localhost:8761
-
+      path: /SPRING-CLOUD-EUREKA-CLIENT/**
 spring:
   application:
     name: Baghant-Gateway
